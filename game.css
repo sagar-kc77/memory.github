@@ -1,0 +1,61 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    background-color: grey;
+    color: black;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.board{
+    height: 500px;
+    width: 400px;
+    padding: 20px 30px;
+    background-color: orange;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    border-radius: 10px;
+}
+.card{
+    height: 100px;
+    width: 100px;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: gray;
+    font-size: 40px;
+    font-weight: 900;
+    border-radius: 10%;
+}
+.card::after{
+    content: '';
+    height: 100px;
+    width: 100px;
+    border-radius: 10px;
+    background-color: blue;
+    position: absolute;
+    backface-visibility: hidden;
+}
+.card.flip{
+    transform: rotateY('180deg');
+}
+.maincontainer{
+    display: flex;
+    flex-direction: column;
+}
+.reset{
+    height: 50px;
+    margin-top: 10px;
+    background-color: rgb(139, 98, 21);
+    font-size: 17px;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 7px;
+    cursor: pointer;
+}
